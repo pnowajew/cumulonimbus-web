@@ -1,171 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima Andes | Precision Meteorology</title>
+    <title>Cumulonimbus | Inteligencia Atmosférica</title>
     <style>
-        /* --- CSS Variables for Consistency --- */
         :root {
-            --bg-deep-green: #0F2B0B;  /* Deep forest green */
-            --text-light-cream: #F7F3E8; /* Soft off-white for text */
-            --accent-gold: #C4A77D;     /* Subtle accent */
-            --neutral-white: #FFFFFF;
-            --neutral-grey: #333333;
-            --font-heading: 'Georgia', serif; /* More organic feel */
-            --font-body: 'Helvetica Neue', sans-serif;
+            --forest-green: #1a2e1d;
+            --sage: #8a9a5b;
+            --cream: #f4f1ea;
+            --text-dark: #2d2d2d;
+            --accent-warm: #d4a373;
         }
-
-        body {
-            font-family: var(--font-body);
-            line-height: 1.8;
-            color: var(--neutral-grey);
-            margin: 0;
-            padding: 0;
-            background-color: var(--neutral-white);
-        }
-
-        /* --- Header: Bringing in the Nature Theme --- */
-        header {
-            background-color: var(--bg-deep-green);
-            color: var(--text-light-cream);
-            padding: 80px 20px; /* Generous padding for minimalism */
-            text-align: center;
-            border-bottom: 5px solid var(--accent-gold);
-        }
-
-        header h1 {
-            font-family: var(--font-heading);
-            font-weight: 400;
-            font-size: 3.5em;
-            margin: 0 0 10px 0;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        /* --- Main Content Area --- */
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        section {
-            margin-bottom: 80px;
-        }
-
-        h2 {
-            font-family: var(--font-heading);
-            font-size: 2.5em;
-            color: var(--bg-deep-green);
-            margin-bottom: 30px;
-            border-bottom: 2px solid var(--accent-gold);
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        h3 { color: var(--bg-deep-green); }
-
-        /* --- Minimalist Visual Icon (Instead of a complex photo) --- */
-        .icon-container {
-            text-align: center;
-            margin-top: -40px; /* Overlaps header slightly */
-            margin-bottom: 40px;
-        }
-
-        .icon-leaf {
-            width: 50px; /* Small and aesthetic */
-            height: auto;
-            opacity: 0.7;
-        }
-
-        /* --- Grid Layout for Focus Areas --- */
-        .focus-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .focus-card {
-            background-color: #fcfcfc;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            transition: transform 0.3s ease; /* Subtle interaction */
-        }
+        body { font-family: 'Helvetica Neue', sans-serif; color: var(--text-dark); background: var(--cream); margin: 0; line-height: 1.6; }
+        header, section { padding: 80px 20px; max-width: 900px; margin: auto; }
         
-        .focus-card:hover {
-            transform: translateY(-5px);
-            border-color: #ddd;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--bg-deep-green);
-            color: var(--text-light-cream);
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-        }
-
-        /* --- Responsive Design (Mobile) --- */
-        @media (max-width: 768px) {
-            header { padding: 60px 15px; }
-            header h1 { font-size: 2.5em; }
-            .focus-grid { grid-template-columns: 1fr; }
-        }
+        /* Hero Section */
+        .hero { background: var(--forest-green); color: var(--cream); text-align: center; border-bottom: 6px solid var(--sage); }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--sage); color: white; text-decoration: none; border-radius: 4px; margin-top: 20px; }
+        
+        /* Sections */
+        h2 { color: var(--forest-green); border-bottom: 2px solid var(--sage); display: inline-block; }
+        .card { background: white; padding: 30px; margin: 20px 0; border-left: 4px solid var(--sage); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Clima Andes</h1>
-        <p>Precision Meteorological Forecasting for High-Altitude Operations & Ecosystem Resilience.</p>
+    <header class="hero">
+        <h1>Inteligencia atmosférica para la resiliencia climática</h1>
+        <p>Soluciones basadas en ciencia para la adaptación al cambio climático.</p>
+        <a href="mailto:tu@email.com" class="btn">Contactar</a>
     </header>
 
-    <!-- This is where we add the "nature" element -->
-    <div class="icon-container">
-        <img src="icon-leaf.png" alt="Stylized Leaf Icon" class="icon-leaf">
-        <!-- If you don't have the icon file yet, you can delete the img tag above -->
-    </div>
+    <section id="problema">
+        <h2>1. El Problema</h2>
+        <p>El cambio climático exige certeza operativa. La variabilidad atmosférica representa un riesgo crítico para la continuidad de las organizaciones que requieren traducir la incertidumbre climática en acciones concretas.</p>
+    </section>
 
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>Leveraging hyper-local data and advanced atmospheric modeling, Clima Andes provides critical climate intelligence to sectors navigating the unique challenges of the Andean Altiplano. We translate complex climate data into actionable decisions, supporting both economic vitality and ecological conservation.</p>
-        </section>
+    <section id="solucion">
+        <h2>2. La Solución</h2>
+        <div class="card">
+            <p>Utilizamos datos meteorológicos y satelitales avanzados para transformar variables atmosféricas en inteligencia accionable, permitiendo una planificación precisa en entornos complejos.</p>
+        </div>
+    </section>
 
-        <section>
-            <h2>Core Focus Areas</h2>
-            <div class="focus-grid">
-                <div class="focus-card">
-                    <h3>Agriculture</h3>
-                    <p>Providing precision frost forecasting, irrigation scheduling, and pest risk analysis to optimize yields for Andean farmers.</p>
-                </div>
-                <div class="focus-card">
-                    <h3>Tourism</h3>
-                    <p>Enhancing safety and visitor experience through hyper-local weather intelligence for high-altitude trekking and observatory operations.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h3>About the Founder</h3>
-            <p>Founded by a climatologist with extensive experience at the ALMA Observatory, Clima Andes is built on a foundation of rigorous scientific research and local Andean knowledge.</p>
-        </section>
+    <section id="traccion">
+        <h2>3. Validación</h2>
+        <p>Nuestro modelo ha sido validado mediante colaboraciones estratégicas en el sector turismo en Perú, aplicando pronósticos meteorológicos de alta precisión para la optimización de operaciones turísticas.</p>
+    </section>
 
-    </main>
-
-    <footer>
-        <p>© 2026 Clima Andes | Santiago de Chile & Cusco, Peru</p>
-        <p>Bridging science and sustainability.</p>
-    </footer>
+    <section id="fundadora">
+        <h2>4. Liderazgo Científico</h2>
+        <p>Fundada por una Dra. en Dinámica de Fluidos y climatóloga, experta en caracterizar condiciones atmosféricas en la alta montaña.</p>
+    </section>
 
 </body>
 </html>
